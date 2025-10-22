@@ -11,3 +11,13 @@
 - 前端侧尽早拆分出播放器核心组件（播放队列、进度条、音量、热键）与库管理视图，使用 Next.js Server Actions/Route Handlers 处理耗时操作，并用 shadcn/ui 保持交互一致性。
 - 后端利用 FastAPI 的异步能力封装本地文件库扫描任务（可配合 APScheduler/任务队列定期同步），将音轨元数据写入 SQLite/PostgreSQL，提供分页检索与多条件过滤接口。
 - 文件播放建议支持分块/Range Streaming，配合缓存头或本地缓存目录提升大文件启动速度
+
+## 前端构建
+运行
+```
+cd frontend
+pnpm i
+pnpm run build
+```
+
+然后 frontend/dist 目录会有静态文件
