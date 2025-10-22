@@ -1,14 +1,14 @@
 from fastapi import FastAPI
-from fastapi_toolbox import run_server, logger
+from fastapi_toolbox import run_server, logger, StaticFilesCache
+
+import os.path
 
 
 app = FastAPI()
 
 
-@app.get("/")
-async def read_root():
-    logger.info("Hello World访问")
-    return {"Hello": "World"}
+front_folder = os.path.join(os.path.dirname(__file__), "frontend/dist")
+app.mount("/", StaticFilesCache(directory=front_folder), name="static")
 
 
 def main():
