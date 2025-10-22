@@ -1,8 +1,7 @@
-from fastapi import FastAPI
-from fastapi_toolbox import run_server, logger, StaticFilesCache
-
 import os.path
 
+from fastapi import FastAPI
+from fastapi_toolbox import StaticFilesCache, run_server
 
 app = FastAPI()
 
@@ -19,4 +18,5 @@ if __name__ == "__main__":
     run_server(
         "main:app",
         log_file="logs/app.log",
+        reload=True
     )
