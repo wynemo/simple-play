@@ -21,3 +21,17 @@ pnpm run build
 ```
 
 然后 frontend/dist 目录会有静态文件
+
+然后运行 `bash build.sh` 打包docker镜像
+
+## 开发
+
+```
+uv run main.py --reload
+```
+启动后端
+
+启动前端
+```
+pnpm run dev
+```
