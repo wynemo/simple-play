@@ -1,0 +1,9 @@
+[project]
+name = "simple-play"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi-toolbox>=0.6.0",
+]
