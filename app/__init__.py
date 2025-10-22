@@ -1,0 +1,1 @@
+"""Simple Play application package."""
